@@ -1,0 +1,16 @@
+kind: Deployment
+apiVersion:	extensions/v1beta1
+metadata:
+  name: kdemo
+spec:
+  replicas: 9
+  template:
+    metadata:
+      labels:
+        app: kdemo
+    spec:
+      containers:
+      - name: kdemo
+        image: ikester/kdemo:v1
+        ports:
+        - containerPort: 8080
