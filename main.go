@@ -67,7 +67,7 @@ func main() {
 	</head>
 	<body style="font-family: Helvetica; font-size: .7em; text-align: center">
 		<h1>I'm a Kubernetes Pod!</h1>
-        <h3 style="padding: 1em; background-color: green; color: white;">ID: %q</h3>
+        <h3 style="padding: 1em; background-color: green; blue: white;">ID: %q</h3>
 	</body>
 </html>`
 
