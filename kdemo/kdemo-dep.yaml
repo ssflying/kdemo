@@ -2,12 +2,18 @@ kind: Deployment
 apiVersion:	extensions/v1beta1
 metadata:
   name: kdemo
+  labels:
+    app: kdemo
+    name: kdemo
+    visualize: 'true'
 spec:
-  replicas: 9
+  replicas: 2
   template:
     metadata:
       labels:
         app: kdemo
+        name: kdemo
+        visualize: 'true'
     spec:
       containers:
       - name: kdemo

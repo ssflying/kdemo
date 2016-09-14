@@ -2,9 +2,12 @@ kind: Service
 apiVersion: v1
 metadata:
   name: kdemo
+  labels:
+    name: kdemo
+    visualize: 'true'
 spec:
   selector:
-    app: kdemo
+    name: kdemo
   ports:
   - protocol: TCP
     port: 8080
