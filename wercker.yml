@@ -12,15 +12,15 @@ build:
         name: copy binary
         code: cp main "$WERCKER_OUTPUT_DIR"
  
- deploy:
-    box: golang
-    steps:
-    # use the scratch step to build a container from scratch based on the files present
-    - internal/docker-scratch-push:
-        username: $DOCKER_USERNAME
-        password: $DOCKER_PASSWORD
-        cmd: ./main
-        tag: $WERCKER_GIT_COMMIT
-        ports: "8080"
-        repository: ssflying/kdemo
-        registry: https://registry.hub.docker.com
+deploy:
+   box: golang
+   steps:
+   # use the scratch step to build a container from scratch based on the files present
+   - internal/docker-scratch-push:
+       username: $DOCKER_USERNAME
+       password: $DOCKER_PASSWORD
+       cmd: ./main
+       tag: $WERCKER_GIT_COMMIT
+       ports: "8080"
+       repository: ssflying/kdemo
+       registry: https://registry.hub.docker.com
