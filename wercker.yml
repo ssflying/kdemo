@@ -1,0 +1,13 @@
+box: golang
+build:
+  # The steps that will be executed on build
+  # Steps make up the actions in your pipeline
+  # Read more about steps on our dev center:
+  # http://devcenter.wercker.com/docs/steps/index.html
+  steps:
+    # Build the project
+    - script:
+        name: go build
+        code: |
+          bash build.sh
+
