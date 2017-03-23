@@ -24,3 +24,5 @@ deploy:
        ports: "8080"
        repository: ssflying/kdemo
        registry: https://registry.hub.docker.com
+       
+       
