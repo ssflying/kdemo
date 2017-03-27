@@ -1,19 +1,14 @@
 pipeline {
   agent any
   stages {
+    stage('prepare env') {
+      steps {
+        tool(name: 'Go 1.8', type: 'go')
+      }
+    }
     stage('build') {
       steps {
         sh 'bash ./build.sh'
-      }
-    }
-    stage('deploy-test') {
-      steps {
-        echo 'echo hello'
-      }
-    }
-    stage('deploy-prd') {
-      steps {
-        echo 'echo prd'
       }
     }
   }
